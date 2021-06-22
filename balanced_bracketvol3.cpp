@@ -1,10 +1,5 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
-string ltrim(const string &);
-string rtrim(const string &);
-
 /*
  * Complete the 'isBalanced' function below.
  *
@@ -20,7 +15,6 @@ string isBalanced(string s)
     for(char ch:s){
          if (count(catalog.begin(), catalog.end(), ch))
                 {
-                    // cout << "Pushing = \t" << ch1 << endl; //debugging comment
                     st.push(ch);
                 }
                 else{
@@ -29,7 +23,6 @@ string isBalanced(string s)
                     st.pop();
                       if (!(ch == mp[ch2]))
                     {
-                        // cout << "Enter Error\n"; //debugging comment
                        return "NO";
                     }
 
